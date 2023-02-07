@@ -19,6 +19,9 @@ module.exports = {
       primary: "#777",
       secondary: "#888888",
     },
+    fontFamily: {
+      primary: ["Lato", "sans-serif"],
+    },
   },
   plugins: [],
 };
