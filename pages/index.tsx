@@ -1,9 +1,19 @@
 import Example from "@/components/Example/Example";
+import { Layout } from "@/components/Layout/Layout";
+import styled from "styled-components";
+
+const StyledParagraph = styled.p`
+  font-size: 20px;
+  color: red;
+`;
 
 export default function Home() {
   return (
     <>
-      <h1 className="text-3xl font-primary font-bold underline ">Hi</h1>
+      <Layout>
+        Hi
+        <StyledParagraph>Styled Paragraph</StyledParagraph>
+      </Layout>
     </>
   );
 }
