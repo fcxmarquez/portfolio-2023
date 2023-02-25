@@ -1,4 +1,3 @@
-import Example from "@/components/Example/Example";
 import { Layout } from "@/components/Layout/Layout";
 import styled from "styled-components";
 
@@ -8,9 +7,7 @@ const StyledParagraph = styled.p`
 `;
 
 export default function Home() {
-  let number: any
-
-  console.log(number)
+  let number: any;
 
   return (
     <>
