@@ -8,6 +8,10 @@ const StyledParagraph = styled.p`
 `;
 
 export default function Home() {
+  let number: any
+
+  console.log(number)
+
   return (
     <>
       <Layout>
