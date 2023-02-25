@@ -50,7 +50,8 @@
         "aspects": ["invalidHref", "preferButton"]
       }
     ],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "sonarjs/no-duplicate-string": "off"
   },
   "settings": {
     "import/resolver": {

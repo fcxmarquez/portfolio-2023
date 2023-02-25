@@ -1,9 +1,9 @@
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { Fragment } from "react";
+import { Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Example() {
@@ -30,10 +30,10 @@ export default function Example() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="#"
+                  href="#2"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "block px-4 py-2 text-sm"
                   )}
                 >
                   Account settings
@@ -43,10 +43,10 @@ export default function Example() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="#"
+                  href="#2"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "block px-4 py-2 text-sm"
                   )}
                 >
                   Support
@@ -56,10 +56,10 @@ export default function Example() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="#"
+                  href="#1"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "block px-4 py-2 text-sm"
                   )}
                 >
                   License
@@ -72,8 +72,8 @@ export default function Example() {
                   <button
                     type="submit"
                     className={classNames(
-                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                      'block w-full px-4 py-2 text-left text-sm'
+                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      "block w-full px-4 py-2 text-left text-sm"
                     )}
                   >
                     Sign out
@@ -85,5 +85,5 @@ export default function Example() {
         </Menu.Items>
       </Transition>
     </Menu>
-  )
+  );
 }

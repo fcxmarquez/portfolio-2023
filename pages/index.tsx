@@ -7,7 +7,7 @@ const StyledParagraph = styled.p`
 `;
 
 export default function Home() {
-  let number: any;
+  let number: number;
 
   return (
     <>
