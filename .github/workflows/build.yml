@@ -1,0 +1,33 @@
+name: Build and Test
+
+on:
+  pull_request:
+    branches:
+      - main
+      - main-dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn run build
+
+      - name: Test build
+        run: |
+          if [ -d "build" ]; then
+            echo "Build succeeded"
+          else
+            echo "Build failed"
+            exit 1
+          fi
+
+      - name: Complete
+        run: echo "Build and test completed successfully"
