@@ -21,10 +21,11 @@ jobs:
 
       - name: Test build
         run: |
-          if [ -d "build" ]; then
+          if [ -d ".next" ]; then
             echo "Build succeeded"
           else
             echo "Build failed"
+            echo "Build directory is not present"
             exit 1
           fi
 
