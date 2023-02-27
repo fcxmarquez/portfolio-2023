@@ -1,9 +1,6 @@
-import React from 'react'
-import { NavWrapper } from '@/components/Nav/nav.styles'
+import React from "react";
+import { NavWrapper } from "@/components/Nav/nav.styles";
 
 export const Nav = () => {
-  return (
-    <NavWrapper>Nav</NavWrapper>
-  )
-}
-
+  return <NavWrapper>Nav</NavWrapper>;
+};
