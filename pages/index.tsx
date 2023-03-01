@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        Hi
+        He
         <StyledParagraph>Styled Paragraph</StyledParagraph>
       </Layout>
     </>
