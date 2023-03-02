@@ -1,17 +1,14 @@
 import { Layout } from "@/components/Layout/Layout";
-import styled from "styled-components";
-
-const StyledParagraph = styled.p`
-  font-size: 20px;
-  color: red;
-`;
+import { Section } from "@/components/Section/Section";
 
 export default function Home() {
   return (
     <>
       <Layout>
-        He
-        <StyledParagraph>Styled Paragraph</StyledParagraph>
+        <Section>About</Section>
+        <Section>Skills</Section>
+        <Section>My Experience</Section>
+        <Section>Contact Me</Section>
       </Layout>
     </>
   );
