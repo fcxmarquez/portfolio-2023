@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      primary: "#235959",
+      primary: "#206370",
       black: "#221e1b",
       white: "#ffffff",
       green: {
@@ -21,6 +21,7 @@ module.exports = {
     textColor: {
       primary: "#777",
       secondary: "#888888",
+      white: "#ffffff",
     },
     fontFamily: {
       primary: ["Lato", "sans-serif"],
