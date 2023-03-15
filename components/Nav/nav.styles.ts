@@ -12,8 +12,10 @@ export const NavWrapper = styled.nav`
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   padding-left: 1rem;
+  left: 0;
+  top: 0;
 
   p {
     font-size: 1rem;

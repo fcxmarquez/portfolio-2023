@@ -1,12 +1,16 @@
 import React, { ReactNode } from "react";
 import { Header } from "@/components/Header/Header";
 import { LayoutWrapper } from "./layout.styles";
+import { NavMenu } from "../NavMenu/NavMenu";
 
 export const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <LayoutWrapper>
-      <Header />
-      <main>{children}</main>
-    </LayoutWrapper>
+    <>
+      <NavMenu />
+      <LayoutWrapper id="layout-wrapper">
+        <Header />
+        <main>{children}</main>
+      </LayoutWrapper>
+    </>
   );
 };

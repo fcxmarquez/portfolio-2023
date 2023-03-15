@@ -11,7 +11,29 @@
 
 html,
 body {
-  max-width: 100vw;
+  min-width: 320px;
+  @apply bg-gray-light;
+  transition: transform 0.5s ease;
   overflow-x: hidden;
-  @apply bg-gray-light
+}
+
+main,
+nav,
+.banner,
+#navbar-modal {
+  transition: transform 0.4s ease-in-out;
+}
+
+.navmenu-active main,
+.navmenu-active nav,
+.navmenu-active .banner {
+  transform: translateX(-17rem);
+}
+
+@media (min-width: 768px) {
+  .navmenu-active main,
+  .navmenu-active nav,
+  .navmenu-active .banner {
+    transform: translateX(-23rem);
+  }
 }
