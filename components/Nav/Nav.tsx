@@ -12,7 +12,7 @@ export const Nav = () => {
 
   return (
     <NavWrapper id="nav-wrapper" className="bg-black">
-      <p className="font-primary font-bold text-white">Francisco Márquez</p>
+      <p className="font-bold text-white">Francisco Márquez</p>
       <div className="hamburger-icon bg-primary">
         <Hamburger
           distance="sm"

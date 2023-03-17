@@ -17,6 +17,10 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  @apply font-primary;
+}
+
 main,
 nav,
 .banner,

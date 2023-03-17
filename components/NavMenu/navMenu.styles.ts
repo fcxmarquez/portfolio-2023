@@ -13,13 +13,85 @@ export const NavMenuWrapper = styled.section`
   backface-visibility: hidden;
   z-index: 1000;
 
-  //if body has the class "nav-menu-open" then transform the nav menu to 0
   &.active {
     transform: translateX(0);
+  }
+
+  .header,
+  .footer {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .header {
+    span {
+      display: flex;
+      position: relative;
+      width: 6rem;
+      aspect-ratio: 1/1;
+      margin-bottom: 1.5rem;
+    }
+
+    img {
+      border-radius: 50%;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #d2f2e9;
+      font-style: italic;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+
+  .sections {
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        height: 3.5rem;
+        color: #ffffff;
+      }
+
+      li.active {
+        background-color: white;
+      }
+
+      li.active a {
+        color: "#206370";
+      }
+    }
   }
 
   @media (min-width: ${systemDesign.breakpoints.tablet}) {
     width: 23rem;
     transform: translateX(23rem);
+
+    .header {
+      span {
+        width: 8rem;
+        aspect-ratio: 1/1;
+      }
+    }
+  }
+
+  @media (min-width: ${systemDesign.breakpoints.desktop}) {
+    .header {
+      width: 22.75rem;
+
+      span {
+        width: 8.625rem;
+        aspect-ratio: 1/1;
+      }
+    }
   }
 `;

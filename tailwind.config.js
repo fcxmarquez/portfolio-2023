@@ -26,6 +26,10 @@ module.exports = {
     fontFamily: {
       primary: ["Lato", "sans-serif"],
     },
+    fontSize: {
+      title: "2.5rem",
+      subtitle: "1.5rem",
+    },
   },
   plugins: [],
 };
