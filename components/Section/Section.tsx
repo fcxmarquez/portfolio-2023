@@ -1,6 +1,18 @@
-import { ReactNode } from "react";
+import { ReactNode, FC } from "react";
 import { SectionWrapper } from "./section.styles";
 
-export const Section = ({ children }: { children: ReactNode }) => {
-  return <SectionWrapper className="bg-white">{children}</SectionWrapper>;
+type SectionProps = {
+  children: ReactNode;
+} & React.HTMLAttributes<HTMLDivElement>;
+
+export const Section: FC<SectionProps> = (props) => {
+  const { children, className } = props;
+
+  const combinedClassNames = ["bg-white", className].filter(Boolean).join(" ");
+
+  return (
+    <SectionWrapper {...props} className={combinedClassNames}>
+      {children}
+    </SectionWrapper>
+  );
 };

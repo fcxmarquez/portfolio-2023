@@ -35,6 +35,8 @@ export const NavWrapper = styled.nav`
   }
 
   @media (min-width: ${systemDesign.breakpoints.desktop}) {
+    display: none;
+
     .hamburger-icon {
       display: none;
     }

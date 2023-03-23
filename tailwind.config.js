@@ -22,6 +22,7 @@ module.exports = {
       primary: "#777",
       secondary: "#888888",
       white: "#ffffff",
+      green: "#206370",
     },
     fontFamily: {
       primary: ["Lato", "sans-serif"],

@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { systemDesign } from "@/styles/vars";
 
+export const navMenuVars = {
+  navMenuDesktopWidth: "21rem",
+  navMenuLargeDesktopWidth: "24rem",
+};
+
 export const NavMenuWrapper = styled.section`
   display: block;
   position: fixed;
@@ -52,14 +57,12 @@ export const NavMenuWrapper = styled.section`
 
   .sections {
     ul {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
       li {
         height: 3.5rem;
         color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       li.active {
@@ -85,6 +88,9 @@ export const NavMenuWrapper = styled.section`
   }
 
   @media (min-width: ${systemDesign.breakpoints.desktop}) {
+    width: ${navMenuVars.navMenuDesktopWidth};
+    transform: translateX(0);
+
     .header {
       width: 22.75rem;
 
@@ -92,6 +98,14 @@ export const NavMenuWrapper = styled.section`
         width: 8.625rem;
         aspect-ratio: 1/1;
       }
+    }
+  }
+
+  @media (min-width: ${systemDesign.breakpoints.largeDesktop}) {
+    width: ${navMenuVars.navMenuLargeDesktopWidth};
+
+    h1 {
+      font-size: 1.75rem;
     }
   }
 `;
