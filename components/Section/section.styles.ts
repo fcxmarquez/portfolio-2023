@@ -12,6 +12,11 @@ export const SectionWrapper = styled.section`
     color: #777777;
   }
 
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+
   h3 {
     font-size: 1.5rem;
     font-weight: 700;
@@ -20,6 +25,7 @@ export const SectionWrapper = styled.section`
 
   h4 {
     font-weight: 700;
+    font-size: 1.25rem;
   }
 
   li {
@@ -31,19 +37,35 @@ export const SectionWrapper = styled.section`
     padding-bottom: 2rem;
     padding-left: ${systemDesign.paddingApplicationTablet};
     padding-right: ${systemDesign.paddingApplicationTablet};
+
+    h2 {
+      font-size: 3rem;
+    }
   }
 
   @media (min-width: ${systemDesign.breakpoints.desktop}) {
     padding-left: ${systemDesign.paddingApplicationDesktop};
     padding-right: ${systemDesign.paddingApplicationDesktop};
+
+    h2 {
+      font-size: 3.5rem;
+    }
   }
 
   @media (min-width: ${systemDesign.breakpoints.largeDesktop}) {
     padding-left: ${systemDesign.paddingApplicationLargeDesktop};
     padding-right: ${systemDesign.paddingApplicationLargeDesktop};
 
+    h2 {
+      font-size: 4rem;
+    }
+
     h3 {
-      font-size: 2rem;
+      font-size: 1.75rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
     }
   }
 `;

@@ -3,6 +3,13 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 
+:root {
+  --breakpoint-mobile: 320px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-large-desktop: 1440px;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -21,6 +28,10 @@ body {
   @apply font-primary;
 }
 
+p {
+  font-size: 1rem;
+}
+
 main,
 nav,
 .banner,
@@ -34,10 +45,17 @@ nav,
   transform: translateX(-17rem);
 }
 
-@media (min-width: 768px) {
+@media screen(tablet) {
   .navmenu-active main,
   .navmenu-active nav,
   .navmenu-active .banner {
     transform: translateX(-23rem);
+  }
+}
+
+@media screen(largeDesktop) {
+  p,
+  a {
+    font-size: 1.2rem;
   }
 }

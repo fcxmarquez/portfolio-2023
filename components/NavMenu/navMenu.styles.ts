@@ -3,7 +3,7 @@ import { systemDesign } from "@/styles/vars";
 
 export const navMenuVars = {
   navMenuDesktopWidth: "21rem",
-  navMenuLargeDesktopWidth: "24rem",
+  navMenuLargeDesktopWidth: "28rem",
 };
 
 export const NavMenuWrapper = styled.section`
@@ -45,6 +45,7 @@ export const NavMenuWrapper = styled.section`
 
     h1 {
       margin-bottom: 1rem;
+      font-weight: 700;
     }
 
     p {
@@ -82,7 +83,6 @@ export const NavMenuWrapper = styled.section`
     .header {
       span {
         width: 8rem;
-        aspect-ratio: 1/1;
       }
     }
   }
@@ -91,12 +91,13 @@ export const NavMenuWrapper = styled.section`
     width: ${navMenuVars.navMenuDesktopWidth};
     transform: translateX(0);
 
-    .header {
-      width: 22.75rem;
+    h1 {
+      font-size: 1.75rem;
+    }
 
+    .header {
       span {
         width: 8.625rem;
-        aspect-ratio: 1/1;
       }
     }
   }
@@ -105,7 +106,18 @@ export const NavMenuWrapper = styled.section`
     width: ${navMenuVars.navMenuLargeDesktopWidth};
 
     h1 {
-      font-size: 1.75rem;
+      font-size: 2rem;
+    }
+
+    .header,
+    .footer {
+      padding: 4rem;
+    }
+
+    .header {
+      span {
+        width: 10rem;
+      }
     }
   }
 `;

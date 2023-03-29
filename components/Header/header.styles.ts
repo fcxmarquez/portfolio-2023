@@ -10,9 +10,21 @@ export const HeaderContainer = styled.header`
     box-sizing: content-box;
   }
 
+  @media (min-width: ${systemDesign.breakpoints.tablet}) {
+    .banner {
+      height: 18.75rem;
+    }
+  }
+
   @media (min-width: ${systemDesign.breakpoints.desktop}) {
     .banner {
       padding-top: 0;
+    }
+  }
+
+  @media (min-width: ${systemDesign.breakpoints.largeDesktop}) {
+    .banner {
+      height: 20rem;
     }
   }
 `;

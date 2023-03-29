@@ -7,7 +7,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        mobile: "320px",
+        tablet: "768px",
+        desktop: "1024px",
+        largeDesktop: "1440px",
+      },
+    },
     colors: {
       primary: "#206370",
       black: "#221e1b",
