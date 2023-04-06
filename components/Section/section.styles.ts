@@ -25,7 +25,8 @@ export const SectionWrapper = styled.section`
 
   h4 {
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
 
   li {
@@ -65,7 +66,7 @@ export const SectionWrapper = styled.section`
     }
 
     h4 {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
   }
 `;
