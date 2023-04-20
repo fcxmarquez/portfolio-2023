@@ -1,38 +1,34 @@
-import {
-  ArticleExperienceContainer,
-  ArticleExperienceImageContainer,
-} from "./articleExperience.styles";
-import { createContext, forwardRef } from "react";
+import { ArticleExperienceContainer } from "./articleExperience.styles";
+import { forwardRef } from "react";
 import { ArticleExperienceProps } from "./articleExperience.interface";
 import Image from "next/image";
+import Link from "next/link";
 
 // Challenge: Create a compound component
 // Compound childrens: image, title, description as a ul list
 
-const ArticleExperience = forwardRef<HTMLElement, ArticleExperienceProps>(
+export const ArticleExperience = forwardRef<HTMLElement, ArticleExperienceProps>(
   (props, ref) => {
-    const { children, title, description } = props;
+    const { srcImage, title, description, link } = props;
 
     return (
       <ArticleExperienceContainer ref={ref}>
-        {children}
-        <h4>{title}</h4>
-        {description}
+        <div className="img-container">
+          {link ? (
+            <Link href={link} target="_blank">
+              <Image src={srcImage} fill alt="Experience image" />
+            </Link>
+          ) : (
+            <Image src={srcImage} fill alt="Experience image" />
+          )}
+        </div>
+        <div className="body">
+          <h4>{title}</h4>
+          {description}
+        </div>
       </ArticleExperienceContainer>
     );
   }
 );
 
-const ArticleExperienceImage = ({ srcImage }: { srcImage: string }) => {
-  return (
-    <ArticleExperienceImageContainer>
-      <Image src={srcImage} fill alt="Experience image" />
-    </ArticleExperienceImageContainer>
-  );
-};
-
 ArticleExperience.displayName = "ArticleExperience";
-
-ArticleExperience.Image = ArticleExperienceImage;
-
-export default ArticleExperience;

@@ -1,7 +1,9 @@
-import { ComponentPropsWithoutRef, ReactNode } from "react";
+import { StaticImageData } from "next/image";
+import { ComponentPropsWithoutRef } from "react";
 
 export type ArticleExperienceProps = ComponentPropsWithoutRef<"div"> & {
-  children: ReactNode;
+  srcImage: string | StaticImageData;
   title: string;
   description: JSX.Element;
+  link?: string;
 };

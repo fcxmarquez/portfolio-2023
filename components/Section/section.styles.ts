@@ -18,14 +18,14 @@ export const SectionWrapper = styled.section`
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
   }
 
   h4 {
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
   }
 
@@ -62,11 +62,11 @@ export const SectionWrapper = styled.section`
     }
 
     h3 {
-      font-size: 1.75rem;
+      font-size: 2.5rem;
     }
 
     h4 {
-      font-size: 1.25rem;
+      font-size: 1.75rem;
     }
   }
 `;

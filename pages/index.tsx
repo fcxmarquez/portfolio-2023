@@ -1,6 +1,21 @@
 import { Section } from "@/components/Section/Section";
 import { MainStack } from "@/components/MainStack/MainStack";
 import { TechStack } from "@/components/TechStack/TechStack";
+import { ArticleExperience } from "@/components/ArticleExperience/ArticleExperience";
+import openMovieImg from "@/public/img/open-movie.png";
+import nextAvocadoImg from "@/public/img/next-avocado.png";
+import homieImg from "@/public/img/homie-webpage.png";
+import finSpheraImg from "@/public/img/finsphera.jpg";
+import {
+  openMovieDescription,
+  homieStartupDescription,
+  nextJsAvocadoDescription,
+  finspheraDescription,
+} from "@/utils/constants/articleDescriptions";
+
+// ArticleExperience link prop
+// Apply bold in the technologies used in the project
+// Do responsive design
 
 export default function Home() {
   return (
@@ -24,8 +39,32 @@ export default function Home() {
         <TechStack />
       </Section>
       <Section id="projects">
-        <h3>My Playground and Experience</h3>
-        {/* Cards */}
+        <h3>My Experience</h3>
+        <div className="features">
+          <ArticleExperience
+            title="FinSphera"
+            srcImage={finSpheraImg}
+            description={finspheraDescription}
+          />
+          <ArticleExperience
+            title="Homie.mx"
+            link="https://homie.mx/new"
+            srcImage={homieImg}
+            description={homieStartupDescription}
+          />
+          <ArticleExperience
+            title="Open Movie"
+            link="https://moviebillboard.netlify.app/"
+            srcImage={openMovieImg}
+            description={openMovieDescription}
+          />
+          <ArticleExperience
+            title="NextJS Avocado"
+            link="https://nextjs-avocado-2022.vercel.app/"
+            srcImage={nextAvocadoImg}
+            description={nextJsAvocadoDescription}
+          />
+        </div>
       </Section>
       <Section id="contact">
         <h3>Contact Me</h3>

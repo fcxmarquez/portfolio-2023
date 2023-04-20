@@ -1,0 +1,14 @@
+.features > article {
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  border-top: solid 3px #f4f4f4;
+}
+
+.features > article:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.features > article:last-child {
+  margin-bottom: 0;
+}

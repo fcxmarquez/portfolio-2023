@@ -2,7 +2,7 @@ export const systemDesign = {
   paddingApplicationMobile: "1.625rem",
   paddingApplicationTablet: "4em",
   paddingApplicationDesktop: "6em",
-  paddingApplicationLargeDesktop: "14em",
+  paddingApplicationLargeDesktop: "10em",
 
   breakpoints: {
     mobile: "320px",
