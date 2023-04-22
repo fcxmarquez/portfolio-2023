@@ -3,7 +3,7 @@ export const openMovieDescription = (
     <ul>
       <li>Developed an HBO Max-style streaming platform</li>
       <li>
-        Integrated the{" "}
+        Integrated the{"  "}
         <a href="https://www.themoviedb.org/?language=es">
           <strong>TMDB API</strong>
         </a>{" "}
