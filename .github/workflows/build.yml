@@ -13,21 +13,30 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Run formatter
+        run: npm run format -- --check
 
       - name: Build
         run: npm run build
 
-      - name: Test build
-        run: |
-          if [ -d ".next" ]; then
-            echo "Build succeeded"
-          else
-            echo "Build failed"
-            echo "Build directory is not present"
-            exit 1
-          fi
+      - name: Auto-merge to main
+        if: github.ref != 'refs/heads/main'
+        uses: pascalgn/automerge-action@v0.14.3
+        env:
+          GITHUB_TOKEN: "${{ secrets.REPO_ACCESS_TOKEN }}"
+          MERGE_LABELS: ""
+          MERGE_METHOD: "squash"
+          MERGE_COMMIT_MESSAGE: "Automatic merge"
+        
 
-      - name: Complete
-        run: echo "Build and test completed successfully"

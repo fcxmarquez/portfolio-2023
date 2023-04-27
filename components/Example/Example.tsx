@@ -10,7 +10,7 @@ export default function Example() {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+        <Menu.Button className="border-gray-300 text-sm text-gray-700 hover:bg-gray-50 focus:ring-indigo-500 focus:ring-offset-gray-100 inline-flex w-full justify-center rounded-md border bg-white px-4 py-2 font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2">
           Options
           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
         </Menu.Button>
@@ -33,7 +33,7 @@ export default function Example() {
                   href="#2"
                   className={classNames(
                     active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-sm"
+                    "text-sm block px-4 py-2"
                   )}
                 >
                   Account settings
@@ -46,7 +46,7 @@ export default function Example() {
                   href="#2"
                   className={classNames(
                     active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-sm"
+                    "text-sm block px-4 py-2"
                   )}
                 >
                   Support
@@ -59,7 +59,7 @@ export default function Example() {
                   href="#1"
                   className={classNames(
                     active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-sm"
+                    "text-sm block px-4 py-2"
                   )}
                 >
                   License
@@ -73,7 +73,7 @@ export default function Example() {
                     type="submit"
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "block w-full px-4 py-2 text-left text-sm"
+                      "text-sm block w-full px-4 py-2 text-left"
                     )}
                   >
                     Sign out
