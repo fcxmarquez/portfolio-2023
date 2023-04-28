@@ -38,5 +38,18 @@ jobs:
           MERGE_LABELS: ""
           MERGE_METHOD: "squash"
           MERGE_COMMIT_MESSAGE: "Automatic merge"
-        
+
+  automerge:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Auto-merge to main
+        if: github.ref != 'refs/heads/main'
+        uses: pascalgn/automerge-action@v0.14.3
+        env:
+          GITHUB_TOKEN: "${{ secrets.REPO_ACCESS_TOKEN }}"
+          MERGE_LABELS: ""
+          MERGE_METHOD: "squash"
+          MERGE_COMMIT_MESSAGE: "Automatic merge"   
 
