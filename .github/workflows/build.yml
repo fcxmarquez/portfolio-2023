@@ -55,6 +55,6 @@ jobs:
           PR_NUMBER=$(jq --raw-output .number "$GITHUB_EVENT_PATH")
           PR_BRANCH=$(gh pr view "$PR_NUMBER" --json headRefName -q ".headRefName")
           echo "Deleting branch $PR_BRANCH"
-          gh repo delete-branch "$PR_BRANCH"
+          gh branch delete "$PR_BRANCH" --force
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
