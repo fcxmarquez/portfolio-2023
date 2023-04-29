@@ -49,7 +49,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - - name: Delete branch after merge
+      - name: Delete branch after merge
         if: ${{ needs.build.steps.automerge_step.conclusion == 'success' }} && github.ref != 'refs/heads/main'
         run: |
           PR_NUMBER=$(jq --raw-output .number "$GITHUB_EVENT_PATH")
