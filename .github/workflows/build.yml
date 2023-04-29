@@ -1,3 +1,4 @@
+# build.yml
 name: Build and Test
 
 on:
@@ -30,7 +31,13 @@ jobs:
       - name: Build
         run: npm run build
 
+  automerge:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Auto-merge to main
+        id: automerge_step
         if: github.ref != 'refs/heads/main'
         uses: pascalgn/automerge-action@v0.14.3
         env:
@@ -39,17 +46,12 @@ jobs:
           MERGE_METHOD: "squash"
           MERGE_COMMIT_MESSAGE: "Automatic merge"
 
-  automerge:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Auto-merge to main
-        if: github.ref != 'refs/heads/main'
-        uses: pascalgn/automerge-action@v0.14.3
+      - name: Delete branch after merge
+        if: ${{ needs.build.steps.automerge_step.conclusion == 'success' }} && github.ref != 'refs/heads/main'
+        run: |
+          PR_NUMBER=$(jq --raw-output .number "$GITHUB_EVENT_PATH")
+          PR_BRANCH=$(gh pr view "$PR_NUMBER" --json headRefName -q ".headRefName")
+          echo "Deleting branch $PR_BRANCH"
+          gh repo delete-branch "$PR_BRANCH"
         env:
-          GITHUB_TOKEN: "${{ secrets.REPO_ACCESS_TOKEN }}"
-          MERGE_LABELS: ""
-          MERGE_METHOD: "squash"
-          MERGE_COMMIT_MESSAGE: "Automatic merge"   
-
+          GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
