@@ -46,6 +46,9 @@ jobs:
           MERGE_METHOD: "squash"
           MERGE_COMMIT_MESSAGE: "Automatic merge"
 
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Delete branch after merge
         if: ${{ needs.build.steps.automerge_step.conclusion == 'success' }} && github.ref != 'refs/heads/main'
         run: |
