@@ -33,10 +33,8 @@ export const useUIState = () => {
     throw new Error("useUIState must be used within a UIStateProvider");
   }
 
-  // get directly the isOpen value from the context
   const [state] = context as [UIState];
   const { isOpen } = state;
-  console.log("isOpen: ", isOpen);
 
   return { isOpen };
 };

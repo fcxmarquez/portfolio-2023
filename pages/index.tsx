@@ -12,10 +12,7 @@ import {
   nextJsAvocadoDescription,
   finspheraDescription,
 } from "@/utils/constants/articleDescriptions";
-
-// ArticleExperience link prop
-// Apply bold in the technologies used in the project
-// Do responsive design
+import { ContactBlock } from "@/components/ContactBlock/ContactBlock";
 
 export default function Home() {
   return (
@@ -68,7 +65,7 @@ export default function Home() {
       </Section>
       <Section id="contact">
         <h3>Contact Me</h3>
-        {/* Linkedin, Github, Email, CV */}
+        <ContactBlock />
       </Section>
     </>
   );
