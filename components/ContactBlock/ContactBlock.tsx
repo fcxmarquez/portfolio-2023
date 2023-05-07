@@ -4,9 +4,9 @@ import { ContactBlockProps } from "./contactBlock.interface";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { MdMail } from "react-icons/md";
 
-export const ContactBlock: FC<ContactBlockProps> = ({ color }) => {
+export const ContactBlock: FC<ContactBlockProps> = ({ color, isSmall }) => {
   return (
-    <ContactBlockContainer color={color}>
+    <ContactBlockContainer isSmall={isSmall} color={color}>
       <ul className="icons">
         <li>
           <a href="https://www.linkedin.com/in/francisco-m-6a0b0410a">

@@ -12,3 +12,7 @@
 .features > article:last-child {
   margin-bottom: 0;
 }
+
+#contact > h3 {
+  margin-bottom: 2rem;
+}
