@@ -2,6 +2,7 @@ import { NavMenuWrapper } from "./navMenu.styles";
 import Avatar from "public/img/avatar.jpg";
 import Image from "next/image";
 import { sections } from "@/utils/constants";
+import { ContactBlock } from "@/components/ContactBlock/ContactBlock";
 
 export const NavMenu = () => {
   return (
@@ -32,7 +33,9 @@ export const NavMenu = () => {
           </li>
         </ul>
       </div>
-      <div className="footer"></div>
+      <div className="footer">
+        <ContactBlock isSmall color="#d2f2e9" />
+      </div>
     </NavMenuWrapper>
   );
 };
