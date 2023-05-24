@@ -20,6 +20,14 @@
     "plugin:tailwindcss/recommended",
     "plugin:prettier/recommended"
   ],
+  "overrides": [
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "react/prop-types": "off"
+      }
+    }
+  ],
   "env": {
     "browser": true,
     "node": true,

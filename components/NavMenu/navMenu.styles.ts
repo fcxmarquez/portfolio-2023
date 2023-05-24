@@ -22,6 +22,14 @@ export const NavMenuWrapper = styled.section`
     transform: translateX(0);
   }
 
+  .on-view {
+    background-color: #ffffff;
+
+    a {
+      color: #206370;
+    }
+  }
+
   .header,
   .footer {
     padding: 2rem;

@@ -3,8 +3,13 @@ import Avatar from "public/img/avatar.jpg";
 import Image from "next/image";
 import { sections } from "@/utils/constants";
 import { ContactBlock } from "@/components/ContactBlock/ContactBlock";
+import { useUIState } from "@/store/UI/UIState";
 
 export const NavMenu = () => {
+  const { activeSection } = useUIState();
+
+  console.log("activeSection", activeSection);
+
   return (
     <NavMenuWrapper id="navbar-modal" className=" bg-primary">
       <div className="header">
@@ -19,16 +24,16 @@ export const NavMenu = () => {
       </div>
       <div className="sections">
         <ul>
-          <li>
+          <li className={activeSection === "about" ? "on-view" : ""}>
             <a href="#about">{sections.about}</a>
           </li>
-          <li>
+          <li className={activeSection === "skills" ? "on-view" : ""}>
             <a href="#skills">{sections.skills}</a>
           </li>
-          <li>
+          <li className={activeSection === "projects" ? "on-view" : ""}>
             <a href="#projects">{sections.projects}</a>
           </li>
-          <li>
+          <li className={activeSection === "contact" ? "on-view" : ""}>
             <a href="#contact">{sections.contact}</a>
           </li>
         </ul>
