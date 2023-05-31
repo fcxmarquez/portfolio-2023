@@ -13,12 +13,12 @@ import {
   finspheraDescription,
 } from "@/utils/constants/articleDescriptions";
 import { ContactBlock } from "@/components/ContactBlock/ContactBlock";
-import { useSectionObserver } from "@/hooks/useIntersectionObserver";
+import { useObserverSection } from "@/hooks/useObserverSection";
 import { useUIStateMutations } from "@/store/UI/UIState";
 import { useEffect } from "react";
 
 export default function Home() {
-  const [activeSection, addNode] = useSectionObserver({ threshold: 0 });
+  const [activeSection, addNode] = useObserverSection();
   const { setActiveSection } = useUIStateMutations();
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <>
-      <Section id="about" className="about" ref={addNode}>
+      <Section ref={addNode} className="about" id="about">
         <h2 className="font-bold text-green">FrontEnd Developer</h2>
         <p>
           FrontEnd developer with 3 years experience. Knowledge in React/NextJs, CSS3+,
@@ -38,14 +38,14 @@ export default function Home() {
           the multidisciplinary potential of human beings. Check my accomplishments!
         </p>
       </Section>
-      <Section id="skills" ref={addNode}>
+      <Section ref={addNode} id="skills">
         <h3>Skills</h3>
         <h4>Main Stack</h4>
         <MainStack />
         <h4>Tech Stack</h4>
         <TechStack />
       </Section>
-      <Section id="projects" ref={addNode}>
+      <Section ref={addNode} id="projects">
         <h3>My Experience</h3>
         <div className="features">
           <ArticleExperience
@@ -73,7 +73,7 @@ export default function Home() {
           />
         </div>
       </Section>
-      <Section id="contact" ref={addNode}>
+      <Section ref={addNode} id="contact">
         <h3>Contact Me</h3>
         <ContactBlock />
       </Section>
