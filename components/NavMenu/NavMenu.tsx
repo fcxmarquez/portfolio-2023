@@ -8,7 +8,14 @@ import { useUIState } from "@/store/UI/UIState";
 export const NavMenu = () => {
   const { activeSection } = useUIState();
 
-  console.log("activeSection", activeSection);
+  const handleSectionClick = (sectionId?: string) => (event: React.MouseEvent) => {
+    event.preventDefault();
+    const sectionElement = sectionId
+      ? document.getElementById(sectionId)
+      : document.querySelector("body");
+
+    sectionElement?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <NavMenuWrapper id="navbar-modal" className=" bg-primary">
@@ -25,16 +32,24 @@ export const NavMenu = () => {
       <div className="sections">
         <ul>
           <li className={activeSection === "about" ? "on-view" : ""}>
-            <a href="#about">{sections.about}</a>
+            <a href="#about" onClick={handleSectionClick()}>
+              {sections.about}
+            </a>
           </li>
           <li className={activeSection === "skills" ? "on-view" : ""}>
-            <a href="#skills">{sections.skills}</a>
+            <a href="#skills" onClick={handleSectionClick("skills")}>
+              {sections.skills}
+            </a>
           </li>
           <li className={activeSection === "projects" ? "on-view" : ""}>
-            <a href="#projects">{sections.projects}</a>
+            <a href="#projects" onClick={handleSectionClick("projects")}>
+              {sections.projects}
+            </a>
           </li>
           <li className={activeSection === "contact" ? "on-view" : ""}>
-            <a href="#contact">{sections.contact}</a>
+            <a href="#contact" onClick={handleSectionClick("contact")}>
+              {sections.contact}
+            </a>
           </li>
         </ul>
       </div>
