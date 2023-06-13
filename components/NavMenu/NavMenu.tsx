@@ -8,8 +8,6 @@ import { useUIState } from "@/store/UI/UIState";
 export const NavMenu = () => {
   const { activeSection } = useUIState();
 
-  console.log("activeSection", activeSection);
-
   return (
     <NavMenuWrapper id="navbar-modal" className=" bg-primary">
       <div className="header">

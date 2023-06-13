@@ -2,7 +2,11 @@ import styled from "styled-components";
 import { systemDesign } from "@/styles/vars";
 import { navMenuVars } from "@/components/NavMenu/navMenu.styles";
 
-export const LayoutWrapper = styled.div`
+type LayoutWrapperProps = {
+  onlyNav?: boolean;
+};
+
+export const LayoutWrapper = styled.div<LayoutWrapperProps>`
   .about {
     p {
       font-size: 1.25rem;
@@ -15,11 +19,13 @@ export const LayoutWrapper = styled.div`
   }
 
   @media (min-width: ${systemDesign.breakpoints.desktop}) {
-    padding-right: ${navMenuVars.navMenuDesktopWidth};
+    padding-right: ${({ onlyNav }) =>
+      onlyNav ? "initial" : `${navMenuVars.navMenuDesktopWidth}`};
   }
 
   @media (min-width: ${systemDesign.breakpoints.largeDesktop}) {
-    padding-right: ${navMenuVars.navMenuLargeDesktopWidth};
+    padding-right: ${({ onlyNav }) =>
+      onlyNav ? "initial" : `${navMenuVars.navMenuLargeDesktopWidth}`};
 
     .about {
       p {

@@ -1,13 +1,16 @@
 import styled from "styled-components";
+import { systemDesign } from "@/styles/vars";
 
 type ContactBlockProps = {
   color?: string;
   isSmall?: boolean;
 };
 
+const { breakpoints } = systemDesign;
+
 export const ContactBlockContainer = styled.div<ContactBlockProps>`
-  max-width: ${(p) => (p.isSmall ? "8rem" : "13rem")};
-  width: ${(props) => (props.isSmall ? "55%" : "100%")};
+  max-width: ${(p) => (p.isSmall ? "10rem" : "15rem")};
+  width: 100%;
   margin: 0 auto;
 
   ul {
@@ -31,5 +34,9 @@ export const ContactBlockContainer = styled.div<ContactBlockProps>`
     height: 100%;
     width: 100%;
     color: ${(p) => (p ? p.color : "inherit")};
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+    max-width: ${(p) => (p.isSmall ? "12rem" : "17rem")};
   }
 `;

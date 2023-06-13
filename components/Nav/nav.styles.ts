@@ -1,11 +1,15 @@
 import styled from "styled-components";
 import { systemDesign } from "@/styles/vars";
 
+type NavWrapperProps = {
+  onlyNav?: boolean;
+};
+
 export const headerCSS = {
   heightMobile: "2.75rem",
 };
 
-export const NavWrapper = styled.nav`
+export const NavWrapper = styled.nav<NavWrapperProps>`
   height: ${headerCSS.heightMobile};
   display: flex;
   width: 100%;
@@ -35,7 +39,7 @@ export const NavWrapper = styled.nav`
   }
 
   @media (min-width: ${systemDesign.breakpoints.desktop}) {
-    display: none;
+    display: ${({ onlyNav }) => (onlyNav ? "flex" : "none")};
 
     .hamburger-icon {
       display: none;
