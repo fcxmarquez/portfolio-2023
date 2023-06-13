@@ -4,7 +4,13 @@ import { LayoutWrapper } from "./layout.styles";
 import { NavMenu } from "../NavMenu/NavMenu";
 import { useUIState, useUIStateMutations } from "@/store/UI/UIState";
 
-export const Layout = ({ children }: { children: ReactNode }) => {
+export const Layout = ({
+  children,
+  onlyNav = false,
+}: {
+  children: ReactNode;
+  onlyNav?: boolean;
+}) => {
   const { isOpen } = useUIState();
   const { toggleNavMenu } = useUIStateMutations();
 
@@ -21,9 +27,9 @@ export const Layout = ({ children }: { children: ReactNode }) => {
 
   return (
     <>
-      <NavMenu />
-      <LayoutWrapper id="layout-wrapper" onClick={handleToggleNavMenu}>
-        <Header />
+      {onlyNav ? null : <NavMenu />}
+      <LayoutWrapper id="layout-wrapper" onClick={handleToggleNavMenu} onlyNav={onlyNav}>
+        <Header onlyNav={onlyNav} />
         <main>{children}</main>
       </LayoutWrapper>
     </>
