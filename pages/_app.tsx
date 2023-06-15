@@ -4,6 +4,7 @@ import { Layout } from "@/components/Layout/Layout";
 import { UIStateProvider } from "@/store/UI/UIState";
 import { ReactNode, ReactElement } from "react";
 import { NextPage } from "next";
+import { Analytics } from "@vercel/analytics/react";
 
 export type NextPageWithLayout<P = Record<string, never>, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -16,5 +17,13 @@ type AppPropsWithLayout = AppProps & {
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => <Layout>{page}</Layout>);
 
-  return <UIStateProvider>{getLayout(<Component {...pageProps} />)}</UIStateProvider>;
+  return (
+    <UIStateProvider>
+      {getLayout(
+        <>
+          <Component {...pageProps} /> <Analytics />
+        </>
+      )}
+    </UIStateProvider>
+  );
 }
