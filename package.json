@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.8",
@@ -37,6 +38,7 @@
     "autoprefixer": "^10.4.13",
     "babel-plugin-styled-components": "^2.1.1",
     "commitizen": "^4.3.0",
+    "cypress": "^12.14.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
