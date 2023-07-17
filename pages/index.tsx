@@ -30,8 +30,8 @@ export default function Home() {
       <Section ref={addNode} className="about" id="about">
         <h2 className="font-bold text-green">FrontEnd Developer</h2>
         <p>
-          FrontEnd developer with 3 years experience. Knowledge in React/NextJs, CSS3+,
-          HTML, Redux, Typescript and unit testing like Jest.
+          FrontEnd developer with more of 3 years experience. Knowledge in React/NextJs,
+          CSS3+, HTML, Redux, Typescript and unit testing like Jest.
         </p>
         <p>
           As a Developer and person, I am a passionate self-taught and a true believer in
