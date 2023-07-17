@@ -43,7 +43,7 @@ jobs:
         if: github.ref != 'refs/heads/main'
         uses: pascalgn/automerge-action@v0.14.3
         env:
-          GITHUB_TOKEN: "${{ secrets.REPO_ACCESS_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           MERGE_LABELS: "automerge"
           MERGE_METHOD: "squash"
           MERGE_COMMIT_MESSAGE: "Automatic merge"
