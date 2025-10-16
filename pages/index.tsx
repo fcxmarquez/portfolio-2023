@@ -4,10 +4,7 @@ import { TechStack } from "@/components/TechStack/TechStack";
 import { ArticleExperience } from "@/components/ArticleExperience/ArticleExperience";
 import homieImg from "@/public/img/homie-webpage.png";
 import finSpheraImg from "@/public/img/finsphera.jpg";
-import {
-  homieStartupDescription,
-  finspheraDescription,
-} from "@/utils/constants/articleDescriptions";
+import { homiePosition, finspheraPositions } from "@/utils/constants/articleDescriptions";
 import { ContactBlock } from "@/components/ContactBlock/ContactBlock";
 import { useObserverSection } from "@/hooks/useObserverSection";
 import { useUIStateMutations } from "@/store/UI/UIState";
@@ -47,13 +44,13 @@ export default function Home() {
           <ArticleExperience
             title="FinSphera"
             srcImage={finSpheraImg}
-            description={finspheraDescription}
+            positions={finspheraPositions}
           />
           <ArticleExperience
             title="Homie.mx"
             link="https://homie.mx/new"
             srcImage={homieImg}
-            description={homieStartupDescription}
+            positions={[homiePosition]}
           />
 
           {/* Commented now because are toy projects */}
