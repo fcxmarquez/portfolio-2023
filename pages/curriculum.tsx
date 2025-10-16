@@ -21,7 +21,7 @@ export default function Curriculum() {
       </Head>
       <main style={mainStyles}>
         <iframe
-          src="https://drive.google.com/file/d/126dfJVNgIAlVknt6cS-JZs0W7HYnUw07/preview"
+          src="https://drive.google.com/file/d/1Af60b_keS6KPAYcRPXPq_OvMcQXr62-w/preview"
           allow="autoplay"
           title="Francisco Marquez's Curriculum"
           style={{
