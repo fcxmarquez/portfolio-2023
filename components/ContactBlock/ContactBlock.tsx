@@ -27,7 +27,12 @@ export const ContactBlock: FC<ContactBlockProps> = ({ color, isSmall }) => {
         </li>
         {/* My CV */}
         <li>
-          <Link href="/curriculum">
+          <Link
+            href="/curriculum"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open CV in a new tab"
+          >
             <MdArticle />
           </Link>
         </li>
