@@ -2,14 +2,10 @@ import { Section } from "@/components/Section/Section";
 import { MainStack } from "@/components/MainStack/MainStack";
 import { TechStack } from "@/components/TechStack/TechStack";
 import { ArticleExperience } from "@/components/ArticleExperience/ArticleExperience";
-import openMovieImg from "@/public/img/open-movie.png";
-import nextAvocadoImg from "@/public/img/next-avocado.png";
 import homieImg from "@/public/img/homie-webpage.png";
 import finSpheraImg from "@/public/img/finsphera.jpg";
 import {
-  openMovieDescription,
   homieStartupDescription,
-  nextJsAvocadoDescription,
   finspheraDescription,
 } from "@/utils/constants/articleDescriptions";
 import { ContactBlock } from "@/components/ContactBlock/ContactBlock";
@@ -30,7 +26,7 @@ export default function Home() {
       <Section ref={addNode} className="about" id="about">
         <h2 className="font-bold text-green">FrontEnd Developer</h2>
         <p>
-          FrontEnd developer with more of 3 years experience. Knowledge in React/NextJs,
+          FrontEnd developer with over 4 years of experience. Knowledge in React/NextJs,
           CSS3+, HTML, Redux, Typescript and unit testing like Jest.
         </p>
         <p>
@@ -59,7 +55,9 @@ export default function Home() {
             srcImage={homieImg}
             description={homieStartupDescription}
           />
-          <ArticleExperience
+
+          {/* Commented now because are toy projects */}
+          {/* <ArticleExperience
             title="Open Movie"
             link="https://moviebillboard.netlify.app/"
             srcImage={openMovieImg}
@@ -70,7 +68,7 @@ export default function Home() {
             link="https://nextjs-avocado-2022.vercel.app/"
             srcImage={nextAvocadoImg}
             description={nextJsAvocadoDescription}
-          />
+          /> */}
         </div>
       </Section>
       <Section ref={addNode} id="contact">
